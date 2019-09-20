@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Jason Smit | Developer</title>
+
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="main.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="styles/navigation.css">
+    <link rel="stylesheet" type="text/css" href="styles/header.css">
+    <link rel="stylesheet" type="text/css" href="styles/index.css">
+    <link rel="stylesheet" type="text/css" href="styles/footer.css">
+    <link rel="stylesheet" type="text/css" href="styles/modal.css">
+</head>
+
+<style>
+    *,*::before,*::after {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+    body {
+        width: 100%;
+        height: 100vh;
+        overflow: hidden;
+    }
+    #main_wrapper {
+        height: 100vh;
+        display: grid;
+        grid-template-columns: 0 1fr 0;
+        grid-template-rows: 5vh 25vh 65vh 5vh;
+    }
+
+</style>
+<body>
+    <!-- Modal Windows   -->
+    <div class="modal" id="interstellar_adventure">
+        <div class="modal_header">
+            <span class="modal_title_wrap">
+                <span class="bracket_left bracket">{</span>
+                <span class="modal_title">Interstellar Adventure</span>
+                <span class="bracket_right bracket">}</span>
+            </span>
+            <span class="close" onclick="closeModal()">&times;</span>
+        </div>
+    </div>
+
+    <div id="menu">
+        <ul class="menu_items" id="menu_items">
+            <li><a href="https://www.google.com/">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Blog</a></li>
+        </ul>
+    </div>
+    <div id="main_wrapper">
+        <nav onclick="navOpenClose()">
+            <div id="burger_wrap">
+                <div class="burger_line"></div>
+                <div class="burger_line"></div>
+                <div class="burger_line"></div>
+            </div>
+        </nav>
+        <header>
+            <h1>Jason Smit</h1>
+            <span class="header_break">
+                <div id="header_left">
+                    <div id="header_wrapper_left" class="header_wrapper">
+                        <div class="header_line header_line_top"></div>
+                        <div class="header_line header_line_bottom"></div>
+                    </div>
+                </div>
+                <div id="header_logo">
+                    <img src="images/fatherSon.svg" alt="celtic knot" width="50px" height="50px"/>
+                </div>
+                <div id="header_right">
+                    <div id="header_wrapper_right" class="header_wrapper">
+                        <div class="header_line header_line_top line_right"></div>
+                        <div class="header_line header_line_bottom line_right"></div>
+                    </div>
+                </div>
+            </span>
+            <h3>Software Developer</h3>
+            <div id="language_icons">
+                <img src="images/css_icon.png" id="css_icon"/>
+                <img src="images/html_icon.png" id="html_icon"/>
+                <img src="images/java_icon.png" id="java_icon"/>
+                <img src="images/javascript_icon.png" id="javascript_icon"/>
+                <img src="images/jquery_icon.png" id="jquery_icon"/>
+                <img src="images/python_icon.png" id="python_icon"/>
+            </div>
+
+        </header>
+        <main>
+            <h1>My Projects</h1>
+            <div class="content_container">
+                <div class="content_wrapper">
+                    <div class="content">
+                        <div class="content_image">
+                            <img src="images/main.PNG" alt="project_showcase"/>
+                        </div>
+                        <div class="content_title">
+                            <h3>Interstellar Adventure</h3>
+                        </div>
+                        <div class="content_description">
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc efficitur, justo sit amet lobortis malesuada, tortor diam laoreet nisi, eu consectetur mi purus eget dui. Duis venenatis hendrerit ex, eget consectetur felis vestibulum vel. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Pellentesque sollicitudin congue justo, non pharetra dolor luctus efficitur. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque vitae viverra lectus. Sed malesuada ac urna vel ultricies.
+                            </p>
+                        </div>
+                        <div class="content_footer">
+                            <div class="content_btn_container">
+                                <div class="content_btn_wrapper" align="center">
+                                    <a class="content_btn" onclick="openModal()" target="_blank" rel="nofollow noopener">View</a>
+                                </div>
+                            </div>
+                            <div class="content_date">
+                                <h4>29/07/2019</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="content_wrapper">
+                    <div class="content">
+                        <div class="content_image">
+                            <img src="images/main.PNG" alt="project_showcase"/>
+                        </div>
+                        <div class="content_title">
+                            <h3>Interstellar Adventure</h3>
+                        </div>
+                        <div class="content_description">
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc efficitur, justo sit amet lobortis malesuada, tortor diam laoreet nisi, eu consectetur mi purus eget dui. Duis venenatis hendrerit ex, eget consectetur felis vestibulum vel. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Pellentesque sollicitudin congue justo, non pharetra dolor luctus efficitur. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque vitae viverra lectus. Sed malesuada ac urna vel ultricies.
+                            </p>
+                        </div>
+                        <div class="content_footer">
+                            <div class="content_btn_container">
+                                <div class="content_btn_wrapper" align="center">
+                                    <a class="content_btn" href="add-website-here" target="_blank" rel="nofollow noopener">View</a>
+                                </div>
+                            </div>
+                            <div class="content_date">
+                                <h4>29/07/2019</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="content_wrapper">
+                    <div class="content">
+                        <div class="content_image">
+                            <img src="images/main.PNG" alt="project_showcase"/>
+                        </div>
+                        <div class="content_title">
+                            <h3>Interstellar Adventure</h3>
+                        </div>
+                        <div class="content_description">
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc efficitur, justo sit amet lobortis malesuada, tortor diam laoreet nisi, eu consectetur mi purus eget dui. Duis venenatis hendrerit ex, eget consectetur felis vestibulum vel. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Pellentesque sollicitudin congue justo, non pharetra dolor luctus efficitur. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque vitae viverra lectus. Sed malesuada ac urna vel ultricies.
+                            </p>
+                        </div>
+                        <div class="content_footer">
+                            <div class="content_btn_container">
+                                <div class="content_btn_wrapper" align="center">
+                                    <a class="content_btn" href="add-website-here" target="_blank" rel="nofollow noopener">View</a>
+                                </div>
+                            </div>
+                            <div class="content_date">
+                                <h4>29/07/2019</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="content_wrapper">
+                    <div class="content">
+                        <div class="content_image">
+                            <img src="images/main.PNG" alt="project_showcase"/>
+                        </div>
+                        <div class="content_title">
+                            <h3>Interstellar Adventure</h3>
+                        </div>
+                        <div class="content_description">
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc efficitur, justo sit amet lobortis malesuada, tortor diam laoreet nisi, eu consectetur mi purus eget dui. Duis venenatis hendrerit ex, eget consectetur felis vestibulum vel. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Pellentesque sollicitudin congue justo, non pharetra dolor luctus efficitur. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque vitae viverra lectus. Sed malesuada ac urna vel ultricies.
+                            </p>
+                        </div>
+                        <div class="content_footer">
+                            <div class="content_btn_container">
+                                <div class="content_btn_wrapper" align="center">
+                                    <a class="content_btn" href="add-website-here" target="_blank" rel="nofollow noopener">View</a>
+                                </div>
+                            </div>
+                            <div class="content_date">
+                                <h4>29/07/2019</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="content_wrapper">
+                    <div class="content">
+                        <div class="content_image">
+                            <img src="images/main.PNG" alt="project_showcase"/>
+                        </div>
+                        <div class="content_title">
+                            <h3>Interstellar Adventure</h3>
+                        </div>
+                        <div class="content_description">
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc efficitur, justo sit amet lobortis malesuada, tortor diam laoreet nisi, eu consectetur mi purus eget dui. Duis venenatis hendrerit ex, eget consectetur felis vestibulum vel. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Pellentesque sollicitudin congue justo, non pharetra dolor luctus efficitur. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque vitae viverra lectus. Sed malesuada ac urna vel ultricies.
+                            </p>
+                        </div>
+                        <div class="content_footer">
+                            <div class="content_btn_container">
+                                <div class="content_btn_wrapper" align="center">
+                                    <a class="content_btn" href="add-website-here" target="_blank" rel="nofollow noopener">View</a>
+                                </div>
+                            </div>
+                            <div class="content_date">
+                                <h4>29/07/2019</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="content_wrapper">
+                    <div class="content">
+                        <div class="content_image">
+                            <img src="images/main.PNG" alt="project_showcase"/>
+                        </div>
+                        <div class="content_title">
+                            <h3>Interstellar Adventure</h3>
+                        </div>
+                        <div class="content_description">
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc efficitur, justo sit amet lobortis malesuada, tortor diam laoreet nisi, eu consectetur mi purus eget dui. Duis venenatis hendrerit ex, eget consectetur felis vestibulum vel. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Pellentesque sollicitudin congue justo, non pharetra dolor luctus efficitur. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque vitae viverra lectus. Sed malesuada ac urna vel ultricies.
+                            </p>
+                        </div>
+                        <div class="content_footer">
+                            <div class="content_btn_container">
+                                <div class="content_btn_wrapper" align="center">
+                                    <a class="content_btn" href="add-website-here" target="_blank" rel="nofollow noopener">View</a>
+                                </div>
+                            </div>
+                            <div class="content_date">
+                                <h4>29/07/2019</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="content_wrapper">
+                    <div class="content">
+                        <div class="content_image">
+                            <img src="images/main.PNG" alt="project_showcase"/>
+                        </div>
+                        <div class="content_title">
+                            <h3>Interstellar Adventure</h3>
+                        </div>
+                        <div class="content_description">
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc efficitur, justo sit amet lobortis malesuada, tortor diam laoreet nisi, eu consectetur mi purus eget dui. Duis venenatis hendrerit ex, eget consectetur felis vestibulum vel. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Pellentesque sollicitudin congue justo, non pharetra dolor luctus efficitur. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque vitae viverra lectus. Sed malesuada ac urna vel ultricies.
+                            </p>
+                        </div>
+                        <div class="content_footer">
+                            <div class="content_btn_container">
+                                <div class="content_btn_wrapper" align="center">
+                                    <a class="content_btn" href="add-website-here" target="_blank" rel="nofollow noopener">View</a>
+                                </div>
+                            </div>
+                            <div class="content_date">
+                                <h4>29/07/2019</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="content_wrapper">
+                    <div class="content">
+                        <div class="content_image">
+                            <img src="images/main.PNG" alt="project_showcase"/>
+                        </div>
+                        <div class="content_title">
+                            <h3>Interstellar Adventure</h3>
+                        </div>
+                        <div class="content_description">
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc efficitur, justo sit amet lobortis malesuada, tortor diam laoreet nisi, eu consectetur mi purus eget dui. Duis venenatis hendrerit ex, eget consectetur felis vestibulum vel. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Pellentesque sollicitudin congue justo, non pharetra dolor luctus efficitur. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque vitae viverra lectus. Sed malesuada ac urna vel ultricies.
+                            </p>
+                        </div>
+                        <div class="content_footer">
+                            <div class="content_btn_container">
+                                <div class="content_btn_wrapper" align="center">
+                                    <a class="content_btn" href="add-website-here" target="_blank" rel="nofollow noopener">View</a>
+                                </div>
+                            </div>
+                            <div class="content_date">
+                                <h4>29/07/2019</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="content_wrapper">
+                    <div class="content">
+                        <div class="content_image">
+                            <img src="images/main.PNG" alt="project_showcase"/>
+                        </div>
+                        <div class="content_title">
+                            <h3>Interstellar Adventure</h3>
+                        </div>
+                        <div class="content_description">
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc efficitur, justo sit amet lobortis malesuada, tortor diam laoreet nisi, eu consectetur mi purus eget dui. Duis venenatis hendrerit ex, eget consectetur felis vestibulum vel. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Pellentesque sollicitudin congue justo, non pharetra dolor luctus efficitur. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque vitae viverra lectus. Sed malesuada ac urna vel ultricies.
+                            </p>
+                        </div>
+                        <div class="content_footer">
+                            <div class="content_btn_container">
+                                <div class="content_btn_wrapper" align="center">
+                                    <a class="content_btn" href="add-website-here" target="_blank" rel="nofollow noopener">View</a>
+                                </div>
+                            </div>
+                            <div class="content_date">
+                                <h4>29/07/2019</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="content_wrapper">
+                    <div class="content">
+                        <div class="content_image">
+                            <img src="images/main.PNG" alt="project_showcase"/>
+                        </div>
+                        <div class="content_title">
+                            <h3>Interstellar Adventure</h3>
+                        </div>
+                        <div class="content_description">
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc efficitur, justo sit amet lobortis malesuada, tortor diam laoreet nisi, eu consectetur mi purus eget dui. Duis venenatis hendrerit ex, eget consectetur felis vestibulum vel. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Pellentesque sollicitudin congue justo, non pharetra dolor luctus efficitur. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque vitae viverra lectus. Sed malesuada ac urna vel ultricies.
+                            </p>
+                        </div>
+                        <div class="content_footer">
+                            <div class="content_btn_container">
+                                <div class="content_btn_wrapper" align="center">
+                                    <a class="content_btn" href="add-website-here" target="_blank" rel="nofollow noopener">View</a>
+                                </div>
+                            </div>
+                            <div class="content_date">
+                                <h4>29/07/2019</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="content_wrapper">
+                    <div class="content">
+                        <div class="content_image">
+                            <img src="images/main.PNG" alt="project_showcase"/>
+                        </div>
+                        <div class="content_title">
+                            <h3>Interstellar Adventure</h3>
+                        </div>
+                        <div class="content_description">
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc efficitur, justo sit amet lobortis malesuada, tortor diam laoreet nisi, eu consectetur mi purus eget dui. Duis venenatis hendrerit ex, eget consectetur felis vestibulum vel. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Pellentesque sollicitudin congue justo, non pharetra dolor luctus efficitur. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque vitae viverra lectus. Sed malesuada ac urna vel ultricies.
+                            </p>
+                        </div>
+                        <div class="content_footer">
+                            <div class="content_btn_container">
+                                <div class="content_btn_wrapper" align="center">
+                                    <a class="content_btn" href="add-website-here" target="_blank" rel="nofollow noopener">View</a>
+                                </div>
+                            </div>
+                            <div class="content_date">
+                                <h4>29/07/2019</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="content_wrapper">
+                    <div class="content">
+                        <div class="content_image">
+                            <img src="images/main.PNG" alt="project_showcase"/>
+                        </div>
+                        <div class="content_title">
+                            <h3>Interstellar Adventure</h3>
+                        </div>
+                        <div class="content_description">
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc efficitur, justo sit amet lobortis malesuada, tortor diam laoreet nisi, eu consectetur mi purus eget dui. Duis venenatis hendrerit ex, eget consectetur felis vestibulum vel. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Pellentesque sollicitudin congue justo, non pharetra dolor luctus efficitur. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque vitae viverra lectus. Sed malesuada ac urna vel ultricies.
+                            </p>
+                        </div>
+                        <div class="content_footer">
+                            <div class="content_btn_container">
+                                <div class="content_btn_wrapper" align="center">
+                                    <a class="content_btn" href="add-website-here" target="_blank" rel="nofollow noopener">View</a>
+                                </div>
+                            </div>
+                            <div class="content_date">
+                                <h4>29/07/2019</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="content_wrapper">
+                    <div class="content">
+                        <div class="content_image">
+                            <img src="images/main.PNG" alt="project_showcase"/>
+                        </div>
+                        <div class="content_title">
+                            <h3>Interstellar Adventure</h3>
+                        </div>
+                        <div class="content_description">
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc efficitur, justo sit amet lobortis malesuada, tortor diam laoreet nisi, eu consectetur mi purus eget dui. Duis venenatis hendrerit ex, eget consectetur felis vestibulum vel. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Pellentesque sollicitudin congue justo, non pharetra dolor luctus efficitur. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque vitae viverra lectus. Sed malesuada ac urna vel ultricies.
+                            </p>
+                        </div>
+                        <div class="content_footer">
+                            <div class="content_btn_container">
+                                <div class="content_btn_wrapper" align="center">
+                                    <a class="content_btn" href="add-website-here" target="_blank" rel="nofollow noopener">View</a>
+                                </div>
+                            </div>
+                            <div class="content_date">
+                                <h4>29/07/2019</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="scroll_box">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </main>
+        <footer>
+            <div id="footer_text_container">
+                <div id="footer_text_wrapper">
+                    <h5>Designed by: Jason Smit</h5>
+                </div>
+            </div>
+            <div id="social_icons_container">
+                <div class="social_icon">
+                    <img src="images/linkedIn_icon.svg" alt="LinkedIn"/>
+                </div>
+                <div class="social_icon">
+                    <img src="images/gitHub_icon.svg" alt="Github"/>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

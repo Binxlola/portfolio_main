@@ -1,0 +1,126 @@
+header {
+    height: 25vh;
+    width: 1fr;
+    grid-column: 2;
+    display: grid;
+    grid-template-columns: 5% 1fr 5%;
+    text-align: center;
+}
+header h1 {
+    color: black;
+    grid-column: 2;
+    align-self: end;
+}
+header h3 {
+    color: black;
+    grid-column: 2;
+}
+
+.header_break {
+    display: grid;
+    grid-template-columns: 1fr 5vh 1fr;
+    align-self: center;
+    grid-column: 2;
+    height: 5vh;
+    vertical-align: center;
+}
+
+.header_line {
+    width: 90%;
+    height: 2px;
+    background-color: black;
+}
+
+.header_wrapper {
+    width: 100%;
+}
+
+.line_right {
+    float: right;
+}
+
+#header_left, #header_right {
+    display: flex;
+    width: 100%;
+    align-items: center;
+}
+#header_right {
+    justify-content: right;
+}
+
+.header_line_bottom {
+    margin: 0.5vh 0 0 0;
+}
+
+#header_logo {
+    height: 50px;
+    width: 50px;
+    grid-column: 2;
+    justify-self: center;
+}
+
+#language_icons {
+    height: 2.4vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    justify-items: center;
+    grid-column: 2;
+}
+
+@keyframes bounce {
+    50% {
+        margin-top: 0;
+    }
+    100% {
+        margin-top: 20px;
+    }
+}
+
+#python_icon {
+    -webkit-animation: bounce 0.5s cubic-bezier(.5,0.05,1,.5) infinite alternate;
+    -o-animation: bounce 0.5s cubic-bezier(.5,0.05,1,.5) infinite alternate;
+    animation: bounce 0.5s cubic-bezier(.5,0.05,1,.5) infinite alternate;
+}
+
+#java_icon {
+    -webkit-animation: bounce 0.5s 0.3s cubic-bezier(.5,0.05,1,.5) infinite alternate;
+    -o-animation: bounce 0.5s 0.3s cubic-bezier(.5,0.05,1,.5) infinite alternate;
+    animation: bounce 0.5s 0.3s cubic-bezier(.5,0.05,1,.5) infinite alternate;
+}
+
+#html_icon {
+    -webkit-animation: bounce 0.5s 0.2s cubic-bezier(.5,0.05,1,.5) infinite alternate;
+    -o-animation: bounce 0.5s 0.2s cubic-bezier(.5,0.05,1,.5) infinite alternate;
+    animation: bounce 0.5s 0.2s cubic-bezier(.5,0.05,1,.5) infinite alternate;
+}
+
+#css_icon {
+    -webkit-animation: bounce 0.5s cubic-bezier(.5,0.05,1,.5) infinite alternate;
+    -o-animation: bounce 0.5s cubic-bezier(.5,0.05,1,.5) infinite alternate;
+    animation: bounce 0.5s cubic-bezier(.5,0.05,1,.5) infinite alternate;
+}
+
+#javascript_icon {
+    -webkit-animation: bounce 0.5s 0.3s cubic-bezier(.5,0.05,1,.5) infinite alternate;
+    -o-animation: bounce 0.5s 0.3s cubic-bezier(.5,0.05,1,.5) infinite alternate;
+    animation: bounce 0.5s 0.3s cubic-bezier(.5,0.05,1,.5) infinite alternate;
+}
+
+#jquery_icon {
+    -webkit-animation: bounce 0.5s 0.2s cubic-bezier(.5,0.05,1,.5) infinite alternate;
+    -o-animation: bounce 0.5s 0.2s cubic-bezier(.5,0.05,1,.5) infinite alternate;
+    animation: bounce 0.5s 0.2s cubic-bezier(.5,0.05,1,.5) infinite alternate;
+}
+
+@keyframes bounce {
+    from { transform: translate3d(0, 0, 0);
+    }
+    to   { transform: translate3d(0, 2vh, 0);
+    }
+}
+@-webkit-keyframes bounce {
+    from { transform: translate3d(0, 0, 0);
+    }
+    to   { transform: translate3d(0, 2vh, 0);
+    }
+}

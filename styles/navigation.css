@@ -1,0 +1,56 @@
+
+#burger_wrap {
+    min-height: 5vh;
+    min-width: 5vh;
+    justify-self: right;
+    padding: 1.2vh 0.5vh 0 0;
+    cursor: pointer;
+}
+
+nav {
+    width: 5vh;
+    height: 5vh;
+    grid-column: 2;
+    justify-self: right;
+    z-index: 3;
+}
+
+#menu {
+    height: 100%;
+    width: 100%;
+    background-color: #191D19;
+    z-index: 2;
+    display: grid;
+    grid-template-columns: 1fr;
+    position: absolute;
+    color: white;
+    margin-left: 100%;
+}
+
+#menu ul {
+    grid-column: 1;
+    justify-self: center;
+    align-self: center;
+    list-style: none;
+}
+
+#menu ul li {
+    font-size: 24px;
+    padding: 10px 0 10px 0;
+    color: white;
+    opacity: 0;
+}
+
+#menu ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+.burger_line {
+    width: 100%;
+    min-height: 0.4vh;
+    background-color: black;
+    margin-top: 0.3vh;
+    border-radius: 4vh;
+}
+
