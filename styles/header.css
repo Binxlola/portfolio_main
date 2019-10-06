@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Vollkorn&display=swap');
+
 header {
     height: 25vh;
     width: 1fr;
@@ -5,13 +7,14 @@ header {
     display: grid;
     grid-template-columns: 5% 1fr 5%;
     text-align: center;
+    font-family: 'Vollkorn', serif;
 }
 header h1 {
     color: black;
     grid-column: 2;
     align-self: end;
 }
-header h3 {
+header h2 {
     color: black;
     grid-column: 2;
 }

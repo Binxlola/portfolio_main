@@ -1,10 +1,11 @@
 footer {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    height: 5vh;
+    height: 3vh;
     width: 100%;
     background-color: black;
     grid-column: 2;
+    font-family: 'Vollkorn', serif;
 }
 
 #footer_text_container {
@@ -30,4 +31,24 @@ footer {
 
 .social_icon {
     padding: 0 10px 0 0;
+    display: flex;
+}
+
+.social_icon img {
+    height: 100%;
+    width: 100%;
+    object-fit: fill;
+    cursor: pointer;
+}
+
+.social_icon h5 {
+    color: white;
+    padding-left: 5px;
+    align-self: center;
+}
+
+#social_icons_container div + div:before {
+    content: " | ";
+    padding: 0 10px;
+    color: white;
 }

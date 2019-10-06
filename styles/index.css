@@ -1,5 +1,7 @@
+@import url('https://fonts.googleapis.com/css?family=Nothing+You+Could+Do&display=swap');
+
 main {
-    height: 65vh;
+    height: 67vh;
     grid-column: 2;
     display: grid;
     grid-template-rows: .1fr 1fr;
@@ -11,6 +13,9 @@ main {
 main h1 {
     color: white;
     justify-self: center;
+    font-family: 'Nothing You Could Do', cursive;
+
+
 }
 
 .content_container {
@@ -39,6 +44,7 @@ main h1 {
     row-gap: 20px;
     background-color: white;
     border-radius: 5%;
+    font-family: 'Josefin Sans', sans-serif;
 }
 
 .content_image {
@@ -86,9 +92,14 @@ main h1 {
     padding: 0 0 10px 0;
 }
 
+.content_date {
+    align-self: center;
+}
+
 .content_btn_container {
     grid-column: 1;
     justify-self: center;
+    cursor: pointer;
 }
 .content_btn {
     color: #494949 !important;
@@ -98,6 +109,7 @@ main h1 {
     border: 2px solid #494949 !important;
     display: inline-block;
     transition: all 0.4s ease 0s;
+    padding: 3px 2px 2px 2px;
 }
 
 .content_btn:hover {

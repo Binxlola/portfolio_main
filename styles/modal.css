@@ -5,6 +5,7 @@
     margin-top: 100vh;
     width: 100%;
     height: 100%;
+    overflow-y: scroll;
 }
 
 .modal_header {
@@ -39,4 +40,73 @@
     grid-column: 2;
     justify-self: right;
     align-self: start;
+}
+
+/* Content */
+.modal_content {
+    height: 90vh;
+    width: 100%;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.modal_content p {
+    font-size: 20px;
+    color: white;
+}
+
+.modal_content_odd, .modal_content_even {
+    max-height: 45vh;
+    display: grid;
+    margin-top: 5vh;
+}
+
+.modal_content_title {
+    grid-column: 2/ span 3;
+    grid-row: 1;
+    color: white;
+    justify-self: center;
+}
+
+.modal_content_odd {
+    grid-template-columns: 5px 0.5fr 1fr 5px;
+    grid-template-rows: 0.2fr 1fr;
+}
+
+.modal_content_even {
+    grid-template-columns: 5px 1fr 0.5fr 5px;
+    grid-template-rows: 0.2fr 1fr;
+}
+
+.image_odd_container {
+    grid-column: 2;
+    grid-row: 2;
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+
+.image_even_container {
+    grid-column: 3;
+    grid-row: 2;
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+
+.image_odd_container img, .image_even_container img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+
+.text_odd_container {
+    padding: 0 10px 0 10px;
+    grid-column: 3;
+    grid-row: 2;
+}
+
+.text_even_container {
+    padding: 0 10px 0 10px;
+    grid-column: 2;
+    grid-row: 2;
 }

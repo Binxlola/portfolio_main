@@ -16,6 +16,10 @@
 </head>
 
 <style>
+    @import url('https://fonts.googleapis.com/css?family=Vollkorn&display=swap');
+    @import url('https://fonts.googleapis.com/css?family=Josefin+Sans:300i&display=swap');
+    @import url('https://fonts.googleapis.com/css?family=Nothing+You+Could+Do&display=swap');
+
     *,*::before,*::after {
         padding: 0;
         margin: 0;
@@ -30,7 +34,7 @@
         height: 100vh;
         display: grid;
         grid-template-columns: 0 1fr 0;
-        grid-template-rows: 5vh 25vh 65vh 5vh;
+        grid-template-rows: 5vh 25vh 67vh 3vh;
     }
 
 </style>
@@ -44,6 +48,44 @@
                 <span class="bracket_right bracket">}</span>
             </span>
             <span class="close" onclick="closeModal()">&times;</span>
+        </div>
+        <div class="modal_content">
+            <div class="modal_content_odd">
+                <div class="modal_content_title">
+                    <h2>Test Title</h2>
+                </div>
+                <div class="image_odd_container">
+                    <img src="images/intellij_back.png" alt="random"/>
+                </div>
+                <div class="text_odd_container">
+                    <p>
+
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean rhoncus nunc ac lacus luctus, quis pretium leo suscipit. Donec euismod fermentum ipsum. Praesent justo justo, varius nec tincidunt vitae, ornare non nibh. Morbi venenatis, dolor ac consequat placerat, purus odio dapibus leo, eu dapibus ipsum leo eget urna. Duis justo ex, lacinia eu tempor a, pharetra vel elit. Donec sagittis sem luctus semper imperdiet. Donec non malesuada ligula, ut rhoncus sem. Nulla non massa ut nunc ultrices rhoncus. Ut placerat turpis nec mi molestie mattis. Suspendisse euismod urna sed justo gravida, non euismod arcu dapibus. Integer gravida libero vel dui rhoncus, sit amet pellentesque quam hendrerit. Mauris pulvinar lectus porttitor ultrices accumsan. Cras sit amet nisl quis metus interdum aliquet sit amet non mi. Aenean pellentesque rhoncus facilisis. Cras ac odio vel velit cursus lacinia. Sed sed risus bibendum, dictum magna quis, scelerisque lectus.
+
+                        Duis vitae nibh consequat, pulvinar enim ac, porta nunc. Duis id diam arcu. Curabitur ultricies, augue vitae dictum aliquam, ex erat dapibus tortor, non lobortis tellus ipsum et ante. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aliquam pretium eget eros at euismod. Integer non ipsum dignissim, vulputate justo lacinia, accumsan tortor. Sed fringilla feugiat lectus vitae ornare. Curabitur eu congue odio. Cras consequat ligula sit amet quam rhoncus, sed auctor odio interdum. Nullam porttitor arcu nisl, ut posuere justo posuere eu. Cras rhoncus dolor et nisl porta accumsan. Nunc nec molestie velit.
+
+                        Nunc lectus elit, venenatis at leo quis, lobortis egestas ipsum. Quisque luctus non nunc at viverra. Cras sed tellus eget urna dictum hendrerit. Aenean eu velit odio. Aenean ornare at dolor non lacinia. Etiam sagittis neque quis purus tincidunt ullamcorper. Pellentesque quis venenatis ante. Morbi sit amet metus velit. Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed rutrum et erat a semper. Donec a tincidunt purus.
+                    </p>
+                </div>
+            </div>
+            <div class="modal_content_even">
+                <div class="modal_content_title">
+                    <h2>Test Title 2</h2>
+                </div>
+                <div class="image_even_container">
+                    <img src="images/webstorm_back.png" alt="random"/>
+                </div>
+                <div class="text_even_container">
+                    <p>
+
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean rhoncus nunc ac lacus luctus, quis pretium leo suscipit. Donec euismod fermentum ipsum. Praesent justo justo, varius nec tincidunt vitae, ornare non nibh. Morbi venenatis, dolor ac consequat placerat, purus odio dapibus leo, eu dapibus ipsum leo eget urna. Duis justo ex, lacinia eu tempor a, pharetra vel elit. Donec sagittis sem luctus semper imperdiet. Donec non malesuada ligula, ut rhoncus sem. Nulla non massa ut nunc ultrices rhoncus. Ut placerat turpis nec mi molestie mattis. Suspendisse euismod urna sed justo gravida, non euismod arcu dapibus. Integer gravida libero vel dui rhoncus, sit amet pellentesque quam hendrerit. Mauris pulvinar lectus porttitor ultrices accumsan. Cras sit amet nisl quis metus interdum aliquet sit amet non mi. Aenean pellentesque rhoncus facilisis. Cras ac odio vel velit cursus lacinia. Sed sed risus bibendum, dictum magna quis, scelerisque lectus.
+
+                        Duis vitae nibh consequat, pulvinar enim ac, porta nunc. Duis id diam arcu. Curabitur ultricies, augue vitae dictum aliquam, ex erat dapibus tortor, non lobortis tellus ipsum et ante. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aliquam pretium eget eros at euismod. Integer non ipsum dignissim, vulputate justo lacinia, accumsan tortor. Sed fringilla feugiat lectus vitae ornare. Curabitur eu congue odio. Cras consequat ligula sit amet quam rhoncus, sed auctor odio interdum. Nullam porttitor arcu nisl, ut posuere justo posuere eu. Cras rhoncus dolor et nisl porta accumsan. Nunc nec molestie velit.
+
+                        Nunc lectus elit, venenatis at leo quis, lobortis egestas ipsum. Quisque luctus non nunc at viverra. Cras sed tellus eget urna dictum hendrerit. Aenean eu velit odio. Aenean ornare at dolor non lacinia. Etiam sagittis neque quis purus tincidunt ullamcorper. Pellentesque quis venenatis ante. Morbi sit amet metus velit. Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed rutrum et erat a semper. Donec a tincidunt purus.
+                    </p>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -82,7 +124,7 @@
                     </div>
                 </div>
             </span>
-            <h3>Software Developer</h3>
+            <h2>Software Developer</h2>
             <div id="language_icons">
                 <img src="images/css_icon.png" id="css_icon"/>
                 <img src="images/html_icon.png" id="html_icon"/>
@@ -431,15 +473,17 @@
         <footer>
             <div id="footer_text_container">
                 <div id="footer_text_wrapper">
-                    <h5>Designed by: Jason Smit</h5>
+                    <h5>&copy; 2019 Jason Smit</h5>
                 </div>
             </div>
             <div id="social_icons_container">
                 <div class="social_icon">
                     <img src="images/linkedIn_icon.svg" alt="LinkedIn"/>
+                    <h5>LinkedIn</h5>
                 </div>
                 <div class="social_icon">
                     <img src="images/gitHub_icon.svg" alt="Github"/>
+                    <h5>GitHub</h5>
                 </div>
             </div>
         </footer>
