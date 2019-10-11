@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="main.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="styles/navigation.css">
+    <link rel="stylesheet" type="text/css" href="styles/footer.css">
+
+</head>
+
+<style>
+    *,*::before,*::after {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+    body {
+        width: 100%;
+        height: 100vh;
+        overflow: hidden;
+    }
+
+    #main_wrapper {
+        height: 92vh;
+        display: grid;
+    }
+
+    main {
+        height: 100%;
+        width: 100%;
+        background-color: green;
+    }
+</style>
+<body>
+<div id="menu">
+    <div class="blog_search_container">
+        <div class="blog_search">
+            <label class="search" for="inpt_search">
+                <input id="inpt_search" onfocus="activeSearch();" onblur="inactiveSearch();" type="text" />
+            </label>
+        </div>
+    </div>
+    <ul class="menu_items" id="menu_items">
+        <li class="nav_item"><a href="index.html">Home</a></li>
+        <li class="nav_item"><a href="#">About</a></li>
+        <li class="nav_item"><a href="contact.html">Contact</a></li>
+        <li class="nav_item"><a href="blog_main.html">Blog</a></li>
+    </ul>
+</div>
+<nav onclick="navOpenClose()">
+    <div id="burger_wrap">
+        <div class="burger_line"></div>
+        <div class="burger_line"></div>
+        <div class="burger_line"></div>
+    </div>
+</nav>
+
+<div id="main_wrapper">
+    <main>
+        <p>hi</p>
+    </main>
+</div>
+<footer>
+    <div id="footer_text_container">
+        <div id="footer_text_wrapper">
+            <h5>&copy; 2019 Jason Smit</h5>
+        </div>
+    </div>
+    <div id="social_icons_container">
+        <div class="social_icon">
+            <img src="images/linkedIn_icon.svg" alt="LinkedIn"/>
+            <h5>LinkedIn</h5>
+        </div>
+        <div class="social_icon">
+            <img src="images/gitHub_icon.svg" alt="Github"/>
+            <h5>GitHub</h5>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>

@@ -18,7 +18,8 @@
 .modal_title_wrap {
     grid-column: 1;
     justify-self: center;
-    align-self: end;
+    align-self: start;
+    margin-left: 56px;
 }
 
 .bracket {
@@ -28,7 +29,7 @@
 
 .modal_title {
     color: white;
-    font-size: 0;
+    font-family: 'Nothing You Could Do', cursive;
 }
 
 .close {
@@ -65,6 +66,7 @@
     grid-row: 1;
     color: white;
     justify-self: center;
+    text-decoration: underline;
 }
 
 .modal_content_odd {
@@ -77,12 +79,17 @@
     grid-template-rows: 0.2fr 1fr;
 }
 
+.image_even_container, .image_odd_container {
+    border: white 2px inset;
+}
+
 .image_odd_container {
     grid-column: 2;
     grid-row: 2;
     height: 100%;
     width: 100%;
-    object-fit: contain;
+    box-shadow: -2px 2px 10px white;
+    padding-left: 2px;
 }
 
 .image_even_container {
@@ -90,7 +97,8 @@
     grid-row: 2;
     height: 100%;
     width: 100%;
-    object-fit: contain;
+    box-shadow: 2px 2px 10px white;
+    padding-right: 2px;
 }
 
 .image_odd_container img, .image_even_container img {
@@ -110,3 +118,98 @@
     grid-column: 2;
     grid-row: 2;
 }
+
+/* Scroll indicator */
+
+.modal_scroll_wrap {
+    width: 100%;
+    height: 3.125em;
+    display: grid;
+    grid-template-columns: 1fr;
+    margin-top: 10px;
+}
+.icon-scroll {
+    width: 1em;
+    height: 3.125em;
+    z-index: 99999;
+    transform: scale(1);
+    grid-column: 1;
+    justify-self: center;
+    align-self: center;
+}
+
+.icon-arrows {
+    width: 1em;
+}
+.icon-arrows::after,
+.icon-arrows::before {
+    content: '';
+}
+.icon-arrows span,
+.icon-arrows::after,
+.icon-arrows::before {
+    display: block;
+    width: 0.315em;
+    height: 0.315em;
+    border-right: 1px solid rgba(255,255,255,.8);
+    border-bottom: 1px solid rgba(255,255,255,.8);
+    margin: 0 0 0.125em 0.315em;
+    transform: rotate(45deg);
+    animation: mouse-scroll 1s infinite;
+    animation-direction: alternate;
+}
+
+.icon-arrows::before {
+    margin-top: 0.315em;
+    animation-delay: .1s;
+}
+
+.icon-scroll span {
+    animation-delay: .2s;
+}
+
+.icon-arrows::after {
+    animation-delay: .3s;
+}
+
+.icon-scroll .mouse {
+    height: 1.375em;
+    width: .875em;
+    border: 1px solid rgba(255,255,255,.8);
+    border-radius: 2em;
+}
+
+.icon-scroll .wheel {
+    position: relative;
+    display: block;
+    height: 0.1875em;
+    width: 0.1875em;
+    margin: 0.1875em auto 0;
+    background: rgba(255,255,255,.8);
+    animation: mouse-wheel 1.2s ease infinite;
+    border-radius: 50%;
+}
+
+@keyframes mouse-wheel {
+    0% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateY(.375em);
+    }
+}
+
+@keyframes mouse-scroll {
+    0%   { opacity: 0; }
+    50%  { opacity: .5; }
+    100% { opacity: 1; }
+}
+
+/* Making sure the content area scroll bar is hidden */
+.modal::-webkit-scrollbar { width: 0 !important }
+.modal { overflow: -moz-scrollbars-none; }
+.modal { -ms-overflow-style: none; }
+.modal { scrollbar-width:none; }

@@ -6,44 +6,80 @@
     cursor: pointer;
 }
 
-/*nav {*/
-/*    width: 5vh;*/
-/*    height: 5vh;*/
-/*    grid-column: 2;*/
-/*    justify-self: right;*/
-/*    z-index: 3;*/
-/*}*/
+/* ====== CSS FOR BLOG SEARCH BAR ====== */
 
-#menu {
+.blog_search_container {
+    display: table;
     height: 100%;
-    width: 100%;
-    background-color: #191D19;
-    z-index: 2;
-    display: grid;
-    grid-template-columns: 1fr;
+    padding-left: 10px;
+}
+.blog_search_container .blog_search {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+}
+/*** STYLES ***/
+.search {
+    display: inline-block;
+    position: relative;
+    height: 2vh;
+    width: 2vh;
+    box-sizing: border-box;
+    margin: 0 0.7vh 0.7vh 0;
+    padding: 0.7vh 0.9vh 0 0.9vh;
+    border: 0.3vh solid #ffffff;
+    border-radius: 50%;
+    transition: all 200ms ease;
+    cursor: text;
+}
+/* handle */
+.search:after {
+    content: "";
     position: absolute;
-    color: white;
-    margin-left: 100%;
+    width: 0.3vh;
+    height: 1.5vh;
+    right: -0.5vh;
+    top: 1vh;
+    background: #ffffff;
+    border-radius: 0.3vh;
+    transform: rotate(-45deg);
+    transition: all 200ms ease;
+}
+
+/* expanded */
+.search.active,
+.search:hover {
+    width: 20vh;
+    height: 3vh;
+    margin-right: 0;
+    padding-top: 0;
+    border-radius: 0;
+}
+.search.active:after,
+.search:hover:after {
+    height: 0;
+}
+.search input {
+    width: 100%;
+    border: none;
+    box-sizing: border-box;
+    font-size: 12px;
     font-family: 'Vollkorn', serif;
-}
-
-#menu ul {
-    grid-column: 1;
-    justify-self: center;
-    align-self: center;
-    list-style: none;
-}
-
-#menu ul li {
-    font-size: 24px;
-    padding: 10px 0 10px 0;
-    color: white;
-    opacity: 0;
+    color: inherit;
+    background: transparent;
+    outline-width: 0;
 }
 
 #menu ul li a {
+    transition: 0.4s;
     text-decoration: none;
     color: white;
+}
+
+#menu ul li a:hover {
+    background-color: #ffffff;
+    color: black;
+    padding: 1vh 2.3vh;
 }
 
 .burger_line {
@@ -59,9 +95,38 @@
     nav {
         width: 5vh;
         height: 5vh;
-        grid-column: 2;
-        justify-self: right;
+        position: relative;
+        z-index: 4;
+    }
+
+    #menu {
+        width: 100%;
+        height: 100vh;
+        display: grid;
+        grid-template-rows: 30vh 70vh;
+        justify-content: center;
+        background-color: black;
+        margin-left: 100%;
+        position: absolute;
         z-index: 3;
+    }
+
+    .blog_search_container {
+        grid-row: 1;
+        align-self: center;
+        height: 3vh;
+    }
+
+    #menu ul {
+        grid-row: 2;
+        list-style: none;
+        align-self: start;
+    }
+
+    #menu ul li {
+        font-size: 24px;
+        padding: 1vh 0 1vh 0;
+        color: white;
     }
 }
 
@@ -74,6 +139,7 @@
         justify-self: right;
         z-index: 0;
         pointer-events: none;
+        display: none;
     }
 
     #burger_wrap {
@@ -84,11 +150,18 @@
         height: 5vh;
         width: 100%;
         background-color: #191D19;
+        position: relative;
         z-index: 2;
         display: grid;
         grid-template-rows: 1fr;
+        justify-content: normal;
         color: white;
         margin-left: 0;
+    }
+
+    .blog_search_container {
+        justify-self: start;
+        grid-row: 1;
     }
 
     #menu ul {
@@ -101,18 +174,13 @@
     #menu ul li {
         display: inline-block;
         font-size: 20px;
-        padding-right: 20px;
+        padding-right: 2vh;
         opacity: 100;
-    }
-
-    #menu ul li a {
-        text-decoration: none;
-        color: white;
     }
 
     #menu li + li:before{
         content: " | ";
-        padding: 0 10px;
+        padding: 0 1vh;
     }
 }
 
