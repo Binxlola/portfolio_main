@@ -15,6 +15,17 @@
     <link rel="stylesheet" type="text/css" href="styles/modal.css">
 </head>
 
+<script>
+    // $("#inpt_search").on('focus', function () {
+    //     $('.search').addClass('active');
+    // });
+    //
+    // $("#inpt_search").on('blur', function () {
+    //     if($(this).val().length == 0)
+    //         $(this).parent('label').removeClass('active');
+    // });
+</script>
+
 <style>
     @import url('https://fonts.googleapis.com/css?family=Vollkorn&display=swap');
     @import url('https://fonts.googleapis.com/css?family=Josefin+Sans:300i&display=swap');
@@ -30,11 +41,12 @@
         height: 100vh;
         overflow: hidden;
     }
+
     #main_wrapper {
-        height: 100vh;
+        height: 92vh;
         display: grid;
-        grid-template-columns: 0 1fr 0;
-        grid-template-rows: 5vh 25vh 67vh 3vh;
+        grid-template-rows: 25vh 70vh;
+        z-index: 0;
     }
 
 </style>
@@ -48,6 +60,16 @@
                 <span class="bracket_right bracket">}</span>
             </span>
             <span class="close" onclick="closeModal()">&times;</span>
+        </div>
+        <div class="modal_scroll_wrap">
+            <div class="icon-scroll">
+                <div class="mouse">
+                    <div class="wheel"></div>
+                </div>
+                <div class="icon-arrows">
+                    <span></span>
+                </div>
+            </div>
         </div>
         <div class="modal_content">
             <div class="modal_content_odd">
@@ -88,23 +110,30 @@
             </div>
         </div>
     </div>
-
     <div id="menu">
+        <div class="blog_search_container">
+            <div class="blog_search">
+                <label class="search" for="inpt_search">
+                    <input id="inpt_search" onfocus="activeSearch();" onblur="inactiveSearch();" type="text" />
+                </label>
+            </div>
+        </div>
         <ul class="menu_items" id="menu_items">
-            <li><a href="https://www.google.com/">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Contact</a></li>
-            <li><a href="#">Blog</a></li>
+            <li class="nav_item"><a href="index.html">Home</a></li>
+            <li class="nav_item"><a href="#">About</a></li>
+            <li class="nav_item"><a href="contact.html">Contact</a></li>
+            <li class="nav_item"><a href="blog_main.html">Blog</a></li>
         </ul>
     </div>
+    <nav onclick="navOpenClose()">
+        <div id="burger_wrap">
+            <div class="burger_line"></div>
+            <div class="burger_line"></div>
+            <div class="burger_line"></div>
+        </div>
+    </nav>
+
     <div id="main_wrapper">
-        <nav onclick="navOpenClose()">
-            <div id="burger_wrap">
-                <div class="burger_line"></div>
-                <div class="burger_line"></div>
-                <div class="burger_line"></div>
-            </div>
-        </nav>
         <header>
             <h1>Jason Smit</h1>
             <span class="header_break">
@@ -465,28 +494,33 @@
                 </div>
             </div>
             <div class="scroll_box">
-                <span></span>
-                <span></span>
-                <span></span>
+                <div class="icon-scroll">
+                    <div class="mouse">
+                        <div class="wheel"></div>
+                    </div>
+                    <div class="icon-arrows">
+                        <span></span>
+                    </div>
+                </div>
             </div>
         </main>
-        <footer>
-            <div id="footer_text_container">
-                <div id="footer_text_wrapper">
-                    <h5>&copy; 2019 Jason Smit</h5>
-                </div>
-            </div>
-            <div id="social_icons_container">
-                <div class="social_icon">
-                    <img src="images/linkedIn_icon.svg" alt="LinkedIn"/>
-                    <h5>LinkedIn</h5>
-                </div>
-                <div class="social_icon">
-                    <img src="images/gitHub_icon.svg" alt="Github"/>
-                    <h5>GitHub</h5>
-                </div>
-            </div>
-        </footer>
     </div>
+    <footer>
+        <div id="footer_text_container">
+            <div id="footer_text_wrapper">
+                <h5>&copy; 2019 Jason Smit</h5>
+            </div>
+        </div>
+        <div id="social_icons_container">
+            <div class="social_icon">
+                <img src="images/linkedIn_icon.svg" alt="LinkedIn"/>
+                <h5>LinkedIn</h5>
+            </div>
+            <div class="social_icon">
+                <img src="images/gitHub_icon.svg" alt="Github"/>
+                <h5>GitHub</h5>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>

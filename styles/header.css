@@ -3,7 +3,7 @@
 header {
     height: 25vh;
     width: 1fr;
-    grid-column: 2;
+    grid-row: 1;
     display: grid;
     grid-template-columns: 5% 1fr 5%;
     text-align: center;

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Jason Smit | Contact</title>
+
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="main.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="styles/footer.css">
+    <link rel="stylesheet" type="text/css" href="styles/navigation.css">
+    <link rel="stylesheet" type="text/css" href="styles/contact.css">
+</head>
+
+<style>
+    @import url('https://fonts.googleapis.com/css?family=Vollkorn&display=swap');
+
+    *,*::before,*::after {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+    body {
+        width: 100%;
+        height: 100vh;
+        overflow: hidden;
+    }
+
+    #background-image {
+        background-image: url(images/contact_back.jpg);
+        opacity:0.2;
+        position:absolute;
+        top:0;
+        left:0;
+        margin-top: 10vh;
+        height: 87vh;
+        width:100%;
+        z-index:0;
+    }
+</style>
+<body>
+<div id="menu">
+    <div class="blog_search_container">
+        <div class="blog_search">
+            <label class="search" for="inpt_search">
+                <input id="inpt_search" onfocus="activeSearch();" onblur="inactiveSearch();" type="text" />
+            </label>
+        </div>
+    </div>
+    <ul class="menu_items" id="menu_items">
+        <li class="nav_item"><a href="index.html">Home</a></li>
+        <li class="nav_item"><a href="#">About</a></li>
+        <li class="nav_item"><a href="contact.html">Contact</a></li>
+        <li class="nav_item"><a href="blog_main.html">Blog</a></li>
+    </ul>
+</div>
+<nav onclick="navOpenClose()">
+    <div id="burger_wrap">
+        <div class="burger_line"></div>
+        <div class="burger_line"></div>
+        <div class="burger_line"></div>
+    </div>
+</nav>
+
+<div id="main_wrapper">
+    <div id="title_wrap">
+        <h1>Contact</h1>
+    </div>
+    <div id="form_wrapper">
+        <form class="cf">
+            <div class="half left cf">
+                <input type="text" id="input-name" placeholder="Name">
+                <input type="email" id="input-email" placeholder="Email address">
+                <input type="text" id="input-subject" placeholder="Subject">
+            </div>
+            <div class="half right cf">
+                <textarea name="message" type="text" id="input-message" placeholder="Message"></textarea>
+            </div>
+            <input type="submit" value="Submit" id="input-submit">
+        </form>
+    </div>
+</div>
+<div id="background-image"></div>
+<footer>
+    <div id="footer_text_container">
+        <div id="footer_text_wrapper">
+            <h5>&copy; 2019 Jason Smit</h5>
+        </div>
+    </div>
+    <div id="social_icons_container">
+        <div class="social_icon">
+            <img src="images/linkedIn_icon.svg" alt="LinkedIn"/>
+            <h5>LinkedIn</h5>
+        </div>
+        <div class="social_icon">
+            <img src="images/gitHub_icon.svg" alt="Github"/>
+            <h5>GitHub</h5>
+        </div>
+    </div>
+</footer>
+</body>
+</html>
