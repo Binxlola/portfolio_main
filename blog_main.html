@@ -10,10 +10,15 @@
 
     <link rel="stylesheet" type="text/css" href="styles/navigation.css">
     <link rel="stylesheet" type="text/css" href="styles/footer.css">
+    <link rel="stylesheet" type="text/css" href="styles/blog.css">
 
 </head>
 
 <style>
+    @import url('https://fonts.googleapis.com/css?family=Vollkorn&display=swap');
+    @import url('https://fonts.googleapis.com/css?family=Josefin+Sans:300i&display=swap');
+    @import url('https://fonts.googleapis.com/css?family=Nothing+You+Could+Do&display=swap');
+
     *,*::before,*::after {
         padding: 0;
         margin: 0;
@@ -28,13 +33,9 @@
     #main_wrapper {
         height: 92vh;
         display: grid;
+        grid-template-columns: 1fr 30px;
     }
 
-    main {
-        height: 100%;
-        width: 100%;
-        background-color: green;
-    }
 </style>
 <body>
 <div id="menu">
@@ -62,8 +63,172 @@
 
 <div id="main_wrapper">
     <main>
-        <p>hi</p>
+        <div class="blog_post">
+            <div class="post_image"><img src="images/blog_post.jpg" alt="post_image"/></div>
+            <div class="post_content">
+                <h1 class="post_title">TEST</h1>
+                <div class="post_description">
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam in nunc semper neque venenatis ultricies in porttitor ipsum. Mauris et orci a mi posuere sodales. Vestibulum ut magna a purus congue scelerisque. Pellentesque pharetra, arcu sit amet lacinia tincidunt, nunc purus ornare tellus, sed interdum elit neque vel arcu. Maecenas ultrices sed sapien et pharetra. Aenean ullamcorper mauris pretium purus congue gravida. Pellentesque laoreet justo id bibendum scelerisque. Suspendisse laoreet ornare nisl sed pharetra. Suspendisse dapibus dapibus ante vel vestibulum. Vivamus eu elit sit amet urna lobortis pellentesque vehicula nec ex. Suspendisse sodales eros at turpis iaculis porta. Curabitur sollicitudin arcu in massa elementum luctus. Mauris in ipsum aliquet, convallis massa eget, rhoncus elit. Aliquam et venenatis sem.
+
+                        Etiam tempus purus eu nisl molestie feugiat. Donec sollicitudin, erat non gravida viverra, elit massa ultricies lacus, vitae lacinia erat arcu eu dui. Proin nisi lacus, dignissim sit amet ex condimentum, lobortis interdum justo. Cras consequat finibus quam et aliquam. Pellentesque accumsan maximus porttitor. Aliquam volutpat feugiat diam hendrerit efficitur. Donec sapien elit, lobortis ut nibh in, pellentesque lobortis quam. Fusce elementum dolor enim, eu tempus purus venenatis a. Quisque at neque a turpis faucibus mollis at nec elit. Suspendisse vel elementum arcu, nec elementum arcu. END</p>
+                </div>
+                <div class="post_footer">
+                    <div class="post_date">
+                        <h4>29/07/2019</h4>
+                    </div>
+                    <div class="post_btn_container">
+                        <div class="post_btn_wrapper">
+                            <a class="post_btn" href="#" target="_blank" rel="nofollow noopener">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="post_notifications">
+                    <div class="notification_wrap">
+                        <span class="notification category">Programming</span>
+                    </div>
+                    <div class="notification_wrap">
+                        <span class="notification topic">Java</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="blog_post">
+            <div class="post_image"><img src="images/blog_post.jpg" alt="post_image"/></div>
+            <div class="post_content">
+                <h1 class="post_title">TEST</h1>
+                <div class="post_description">
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam in nunc semper neque venenatis ultricies in porttitor ipsum. Mauris et orci a mi posuere sodales. Vestibulum ut magna a purus congue scelerisque. Pellentesque pharetra, arcu sit amet lacinia tincidunt, nunc purus ornare tellus, sed interdum elit neque vel arcu. Maecenas ultrices sed sapien et pharetra. Aenean ullamcorper mauris pretium purus congue gravida. Pellentesque laoreet justo id bibendum scelerisque. Suspendisse laoreet ornare nisl sed pharetra. Suspendisse dapibus dapibus ante vel vestibulum. Vivamus eu elit sit amet urna lobortis pellentesque vehicula nec ex. Suspendisse sodales eros at turpis iaculis porta. Curabitur sollicitudin arcu in massa elementum luctus. Mauris in ipsum aliquet, convallis massa eget, rhoncus elit. Aliquam et venenatis sem.
+
+                        Etiam tempus purus eu nisl molestie feugiat. Donec sollicitudin, erat non gravida viverra, elit massa ultricies lacus, vitae lacinia erat arcu eu dui. Proin nisi lacus, dignissim sit amet ex condimentum, lobortis interdum justo. Cras consequat finibus quam et aliquam. Pellentesque accumsan maximus porttitor. Aliquam volutpat feugiat diam hendrerit efficitur. Donec sapien elit, lobortis ut nibh in, pellentesque lobortis quam. Fusce elementum dolor enim, eu tempus purus venenatis a. Quisque at neque a turpis faucibus mollis at nec elit. Suspendisse vel elementum arcu, nec elementum arcu. END</p>
+                </div>
+                <div class="post_footer">
+                    <div class="post_date">
+                        <h4>29/07/2019</h4>
+                    </div>
+                    <div class="post_btn_container">
+                        <div class="post_btn_wrapper">
+                            <a class="post_btn" href="#" target="_blank" rel="nofollow noopener">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="post_notifications">
+                    <div class="notification_wrap">
+                        <span class="notification category">hi</span>
+                    </div>
+                    <div class="notification_wrap">
+                        <span class="notification topic">hi</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="blog_post">
+            <div class="post_image"><img src="images/blog_post.jpg" alt="post_image"/></div>
+            <div class="post_content">
+                <h1 class="post_title">TEST</h1>
+                <div class="post_description">
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam in nunc semper neque venenatis ultricies in porttitor ipsum. Mauris et orci a mi posuere sodales. Vestibulum ut magna a purus congue scelerisque. Pellentesque pharetra, arcu sit amet lacinia tincidunt, nunc purus ornare tellus, sed interdum elit neque vel arcu. Maecenas ultrices sed sapien et pharetra. Aenean ullamcorper mauris pretium purus congue gravida. Pellentesque laoreet justo id bibendum scelerisque. Suspendisse laoreet ornare nisl sed pharetra. Suspendisse dapibus dapibus ante vel vestibulum. Vivamus eu elit sit amet urna lobortis pellentesque vehicula nec ex. Suspendisse sodales eros at turpis iaculis porta. Curabitur sollicitudin arcu in massa elementum luctus. Mauris in ipsum aliquet, convallis massa eget, rhoncus elit. Aliquam et venenatis sem.
+
+                        Etiam tempus purus eu nisl molestie feugiat. Donec sollicitudin, erat non gravida viverra, elit massa ultricies lacus, vitae lacinia erat arcu eu dui. Proin nisi lacus, dignissim sit amet ex condimentum, lobortis interdum justo. Cras consequat finibus quam et aliquam. Pellentesque accumsan maximus porttitor. Aliquam volutpat feugiat diam hendrerit efficitur. Donec sapien elit, lobortis ut nibh in, pellentesque lobortis quam. Fusce elementum dolor enim, eu tempus purus venenatis a. Quisque at neque a turpis faucibus mollis at nec elit. Suspendisse vel elementum arcu, nec elementum arcu. END</p>
+                </div>
+                <div class="post_footer">
+                    <div class="post_date">
+                        <h4>29/07/2019</h4>
+                    </div>
+                    <div class="post_btn_container">
+                        <div class="post_btn_wrapper">
+                            <a class="post_btn" href="#" target="_blank" rel="nofollow noopener">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="post_notifications">
+                    <div class="notification_wrap">
+                        <span class="notification category">hi</span>
+                    </div>
+                    <div class="notification_wrap">
+                        <span class="notification topic">hi</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="blog_post">
+            <div class="post_image"><img src="images/blog_post.jpg" alt="post_image"/></div>
+            <div class="post_content">
+                <h1 class="post_title">TEST</h1>
+                <div class="post_description">
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam in nunc semper neque venenatis ultricies in porttitor ipsum. Mauris et orci a mi posuere sodales. Vestibulum ut magna a purus congue scelerisque. Pellentesque pharetra, arcu sit amet lacinia tincidunt, nunc purus ornare tellus, sed interdum elit neque vel arcu. Maecenas ultrices sed sapien et pharetra. Aenean ullamcorper mauris pretium purus congue gravida. Pellentesque laoreet justo id bibendum scelerisque. Suspendisse laoreet ornare nisl sed pharetra. Suspendisse dapibus dapibus ante vel vestibulum. Vivamus eu elit sit amet urna lobortis pellentesque vehicula nec ex. Suspendisse sodales eros at turpis iaculis porta. Curabitur sollicitudin arcu in massa elementum luctus. Mauris in ipsum aliquet, convallis massa eget, rhoncus elit. Aliquam et venenatis sem.
+
+                        Etiam tempus purus eu nisl molestie feugiat. Donec sollicitudin, erat non gravida viverra, elit massa ultricies lacus, vitae lacinia erat arcu eu dui. Proin nisi lacus, dignissim sit amet ex condimentum, lobortis interdum justo. Cras consequat finibus quam et aliquam. Pellentesque accumsan maximus porttitor. Aliquam volutpat feugiat diam hendrerit efficitur. Donec sapien elit, lobortis ut nibh in, pellentesque lobortis quam. Fusce elementum dolor enim, eu tempus purus venenatis a. Quisque at neque a turpis faucibus mollis at nec elit. Suspendisse vel elementum arcu, nec elementum arcu. END</p>
+                </div>
+                <div class="post_footer">
+                    <div class="post_date">
+                        <h4>29/07/2019</h4>
+                    </div>
+                    <div class="post_btn_container">
+                        <div class="post_btn_wrapper">
+                            <a class="post_btn" href="#" target="_blank" rel="nofollow noopener">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="post_notifications">
+                    <div class="notification_wrap">
+                        <span class="notification category">hi</span>
+                    </div>
+                    <div class="notification_wrap">
+                        <span class="notification topic">hi</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="blog_post">
+            <div class="post_image"><img src="images/blog_post.jpg" alt="post_image"/></div>
+            <div class="post_content">
+                <h1 class="post_title">TEST</h1>
+                <div class="post_description">
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam in nunc semper neque venenatis ultricies in porttitor ipsum. Mauris et orci a mi posuere sodales. Vestibulum ut magna a purus congue scelerisque. Pellentesque pharetra, arcu sit amet lacinia tincidunt, nunc purus ornare tellus, sed interdum elit neque vel arcu. Maecenas ultrices sed sapien et pharetra. Aenean ullamcorper mauris pretium purus congue gravida. Pellentesque laoreet justo id bibendum scelerisque. Suspendisse laoreet ornare nisl sed pharetra. Suspendisse dapibus dapibus ante vel vestibulum. Vivamus eu elit sit amet urna lobortis pellentesque vehicula nec ex. Suspendisse sodales eros at turpis iaculis porta. Curabitur sollicitudin arcu in massa elementum luctus. Mauris in ipsum aliquet, convallis massa eget, rhoncus elit. Aliquam et venenatis sem.
+
+                        Etiam tempus purus eu nisl molestie feugiat. Donec sollicitudin, erat non gravida viverra, elit massa ultricies lacus, vitae lacinia erat arcu eu dui. Proin nisi lacus, dignissim sit amet ex condimentum, lobortis interdum justo. Cras consequat finibus quam et aliquam. Pellentesque accumsan maximus porttitor. Aliquam volutpat feugiat diam hendrerit efficitur. Donec sapien elit, lobortis ut nibh in, pellentesque lobortis quam. Fusce elementum dolor enim, eu tempus purus venenatis a. Quisque at neque a turpis faucibus mollis at nec elit. Suspendisse vel elementum arcu, nec elementum arcu. END</p>
+                </div>
+                <div class="post_footer">
+                    <div class="post_date">
+                        <h4>29/07/2019</h4>
+                    </div>
+                    <div class="post_btn_container">
+                        <div class="post_btn_wrapper">
+                            <a class="post_btn" href="#" target="_blank" rel="nofollow noopener">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="post_notifications">
+                    <div class="notification_wrap">
+                        <span class="notification category">hi</span>
+                    </div>
+                    <div class="notification_wrap">
+                        <span class="notification topic">hi</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
     </main>
+    <div class="blog_scroll_wrap">
+        <div class="icon-scroll">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+            <div class="icon-arrows">
+                <span></span>
+            </div>
+        </div>
+    </div>
 </div>
 <footer>
     <div id="footer_text_container">
