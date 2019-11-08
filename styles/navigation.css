@@ -65,7 +65,7 @@
     box-sizing: border-box;
     font-size: 12px;
     font-family: 'Vollkorn', serif;
-    color: inherit;
+    color: #ffffff;
     background: transparent;
     outline-width: 0;
 }
@@ -91,7 +91,7 @@
 }
 
 /* smartphones, iPhone, portrait 480x320 phones */
-@media (min-width:320px) {
+@media (max-width:699px) {
     nav {
         width: 5vh;
         height: 5vh;
