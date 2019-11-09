@@ -292,8 +292,12 @@ main h1 {
     grid-row: 2;
     height: 100%;
     width: 100%;
-    box-shadow: -2px 2px 10px white;
     padding-left: 2px;
+
+    -webkit-box-shadow: -2px 2px 10px white;
+    -moz-box-shadow: -2px 2px 10px white;
+    -o-box-shadow: -2px 2px 10px white;
+    box-shadow: -2px 2px 10px white;
 }
 
 .image_even_container {
@@ -301,8 +305,12 @@ main h1 {
     grid-row: 2;
     height: 100%;
     width: 100%;
-    box-shadow: 2px 2px 10px white;
     padding-right: 2px;
+
+    -webkit-box-shadow: 2px 2px 10px white;
+    -moz-box-shadow: 2px 2px 10px white;
+    -o-box-shadow: 2px 2px 10px white;
+    box-shadow: 2px 2px 10px white;
 }
 
 .image_odd_container img, .image_even_container img {
