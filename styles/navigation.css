@@ -24,13 +24,23 @@
     position: relative;
     height: 2vh;
     width: 2vh;
-    box-sizing: border-box;
     margin: 0 0.7vh 0.7vh 0;
     padding: 0.7vh 0.9vh 0 0.9vh;
     border: 0.3vh solid #ffffff;
-    border-radius: 50%;
-    transition: all 200ms ease;
     cursor: text;
+
+    -webkit-transition: all 200ms ease;
+    -moz-transition: all 200ms ease;
+    -o-transition: all 200ms ease;
+    transition: all 200ms ease;
+
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
 }
 /* handle */
 .search:after {
@@ -41,9 +51,20 @@
     right: -0.5vh;
     top: 1vh;
     background: #ffffff;
+
+    -webkit-border-radius: 0.3vh;
+    -moz-border-radius: 0.3vh;
     border-radius: 0.3vh;
-    transform: rotate(-45deg);
+
+    -webkit-transition: all 200ms ease;
+    -moz-transition: all 200ms ease;
+    -o-transition: all 200ms ease;
     transition: all 200ms ease;
+
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
 }
 
 /* expanded */
@@ -53,6 +74,9 @@
     height: 3vh;
     margin-right: 0;
     padding-top: 0;
+
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
     border-radius: 0;
 }
 .search.active:after,
@@ -62,18 +86,25 @@
 .search input {
     width: 100%;
     border: none;
-    box-sizing: border-box;
     font-size: 12px;
     font-family: 'Vollkorn', serif;
     color: #ffffff;
     background: transparent;
     outline-width: 0;
+
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 #menu ul li a {
-    transition: 0.4s;
     text-decoration: none;
     color: white;
+
+    -webkit-transition: 0.4s;
+    -moz-transition: 0.4s;
+    -o-transition: 0.4s;
+    transition: 0.4s;
 }
 
 #menu ul li a:hover {
@@ -87,6 +118,9 @@
     min-height: 0.4vh;
     background-color: black;
     margin-top: 0.3vh;
+
+    -webkit-border-radius: 4vh;
+    -moz-border-radius: 4vh;
     border-radius: 4vh;
 }
 
@@ -104,17 +138,21 @@
         height: 100vh;
         display: grid;
         grid-template-rows: 30vh 70vh;
-        justify-content: center;
         background-color: black;
         margin-left: 100%;
         position: absolute;
         z-index: 3;
+
+        -webkit-justify-content: center;
+        justify-content: center;
     }
 
     .blog_search_container {
         grid-row: 1;
-        align-self: center;
         height: 3vh;
+
+        -webkit-align-self: center;
+        align-self: center;
     }
 
     #menu ul {
@@ -131,7 +169,7 @@
 }
 
 /* big landscape tablets, laptops, and desktops */
-@media (min-width: 1280px), (min-width: 961px), (min-width: 700px) {
+@media (min-width: 700px) {
     nav {
         width: 100%;
         height: 5vh;
@@ -167,8 +205,10 @@
     #menu ul {
         grid-row: 1;
         justify-self: end;
-        align-self: center;
         list-style: none;
+
+        -webkit-align-self: center;
+        align-self: center;
     }
 
     #menu ul li {

@@ -11,7 +11,12 @@
     display: grid;
     align-content: center;
     justify-content: center;
+
+    -webkit-align-content: center;
+    -webkit-justify-content: center;
+    -webkit-align-self: center;
 }
+
 #main_wrapper {
     height: 92vh;
     display: grid;
@@ -28,6 +33,8 @@
     display: grid;
     grid-template-columns: 1fr;
     z-index: 1;
+
+    -webkit-align-self: center;
 }
 
 form {
@@ -39,7 +46,10 @@ form {
     justify-self: center;
     z-index: 2;
     background-color: black;
+
+    -webkit-align-self: center;
 }
+
 form input, form textarea {
     border: 0;
     outline: 0;
@@ -51,32 +61,53 @@ form input, form textarea {
     font-family: 'Merriweather', sans-serif;
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
     resize: none;
+
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+
+    -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+    -o-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
 }
+
 form input:focus, form textarea:focus {
-    box-shadow: 0 0px 2px rgba(255, 0, 0, 1) !important;
+    -webkit-box-shadow: 0 0 2px rgba(255, 0, 0, 1) !important;
+    -moz-box-shadow: 0 0 2px rgba(255, 0, 0, 1) !important;
+    -o-box-shadow: 0 0 2px rgba(255, 0, 0, 1) !important;
+    box-shadow: 0 0 2px rgba(255, 0, 0, 1) !important;
 }
+
 form #input-submit {
     color: white;
     background: red;
     cursor: pointer;
 }
+
 form #input-submit:hover {
+    -webkit-box-shadow: 0 1px 1px 1px rgba(170, 170, 170, 0.6);
+    -moz-box-shadow: 0 1px 1px 1px rgba(170, 170, 170, 0.6);
+    -o-box-shadow: 0 1px 1px 1px rgba(170, 170, 170, 0.6);
     box-shadow: 0 1px 1px 1px rgba(170, 170, 170, 0.6);
 }
+
 form textarea {
     height: 126px;
 }
+
 .half {
     float: left;
     width: 48%;
     margin-bottom: 1em;
 }
+
 .right {
     width: 50%;
 }
+
 .left {
     margin-right: 2%;
 }
+
 @media (max-width: 480px) {
     .half {
         width: 100%;
@@ -84,6 +115,7 @@ form textarea {
         margin-bottom: 0;
     }
 }
+
 /* Clearfix */
 .cf:before, .cf:after {
     content: " ";

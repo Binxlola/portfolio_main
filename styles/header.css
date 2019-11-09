@@ -9,11 +9,13 @@ header {
     text-align: center;
     font-family: 'Vollkorn', serif;
 }
+
 header h1 {
     color: black;
     grid-column: 2;
     align-self: end;
 }
+
 header h2 {
     color: black;
     grid-column: 2;
@@ -26,6 +28,8 @@ header h2 {
     grid-column: 2;
     height: 5vh;
     vertical-align: center;
+
+    -webkit-align-self: center;
 }
 
 .header_line {
@@ -46,6 +50,8 @@ header h2 {
     display: flex;
     width: 100%;
     align-items: center;
+
+    -webkit-align-items: center;
 }
 #header_right {
     justify-content: right;
@@ -81,36 +87,42 @@ header h2 {
 
 #python_icon {
     -webkit-animation: bounce 0.5s cubic-bezier(.5,0.05,1,.5) infinite alternate;
+    -moz-animation: bounce 0.5s cubic-bezier(.5,0.05,1,.5) infinite alternate;
     -o-animation: bounce 0.5s cubic-bezier(.5,0.05,1,.5) infinite alternate;
     animation: bounce 0.5s cubic-bezier(.5,0.05,1,.5) infinite alternate;
 }
 
 #java_icon {
     -webkit-animation: bounce 0.5s 0.3s cubic-bezier(.5,0.05,1,.5) infinite alternate;
+    -moz-animation: bounce 0.5s 0.3s cubic-bezier(.5,0.05,1,.5) infinite alternate;
     -o-animation: bounce 0.5s 0.3s cubic-bezier(.5,0.05,1,.5) infinite alternate;
     animation: bounce 0.5s 0.3s cubic-bezier(.5,0.05,1,.5) infinite alternate;
 }
 
 #html_icon {
     -webkit-animation: bounce 0.5s 0.2s cubic-bezier(.5,0.05,1,.5) infinite alternate;
+    -moz-animation: bounce 0.5s 0.2s cubic-bezier(.5,0.05,1,.5) infinite alternate;
     -o-animation: bounce 0.5s 0.2s cubic-bezier(.5,0.05,1,.5) infinite alternate;
     animation: bounce 0.5s 0.2s cubic-bezier(.5,0.05,1,.5) infinite alternate;
 }
 
 #css_icon {
     -webkit-animation: bounce 0.5s cubic-bezier(.5,0.05,1,.5) infinite alternate;
+    -moz-animation: bounce 0.5s cubic-bezier(.5,0.05,1,.5) infinite alternate;
     -o-animation: bounce 0.5s cubic-bezier(.5,0.05,1,.5) infinite alternate;
     animation: bounce 0.5s cubic-bezier(.5,0.05,1,.5) infinite alternate;
 }
 
 #javascript_icon {
     -webkit-animation: bounce 0.5s 0.3s cubic-bezier(.5,0.05,1,.5) infinite alternate;
+    -moz-animation: bounce 0.5s 0.3s cubic-bezier(.5,0.05,1,.5) infinite alternate;
     -o-animation: bounce 0.5s 0.3s cubic-bezier(.5,0.05,1,.5) infinite alternate;
     animation: bounce 0.5s 0.3s cubic-bezier(.5,0.05,1,.5) infinite alternate;
 }
 
 #jquery_icon {
     -webkit-animation: bounce 0.5s 0.2s cubic-bezier(.5,0.05,1,.5) infinite alternate;
+    -moz-animation: bounce 0.5s 0.2s cubic-bezier(.5,0.05,1,.5) infinite alternate;
     -o-animation: bounce 0.5s 0.2s cubic-bezier(.5,0.05,1,.5) infinite alternate;
     animation: bounce 0.5s 0.2s cubic-bezier(.5,0.05,1,.5) infinite alternate;
 }
@@ -122,6 +134,13 @@ header h2 {
     }
 }
 @-webkit-keyframes bounce {
+    from { transform: translate3d(0, 0, 0);
+    }
+    to   { transform: translate3d(0, 2vh, 0);
+    }
+}
+
+@-moz-keyframes bounce {
     from { transform: translate3d(0, 0, 0);
     }
     to   { transform: translate3d(0, 2vh, 0);

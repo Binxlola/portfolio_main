@@ -6,7 +6,6 @@ main {
     grid-row: 2;
     grid-template-rows: .1fr 1fr;
     grid-template-columns: 1fr .03fr;
-    /*background-image: linear-gradient(#191D19, #434343,#191D19);*/
     background-color: #191D19;
 }
 
@@ -21,14 +20,14 @@ main h1 {
 .content_container {
     display: grid;
     width: 100%;
-    height: 100%;
+    min-height: 100%;
     justify-items: center;
     justify-self: left;
     row-gap: 5%;
-    padding: 8px 0 0 0;
+    padding: 8px 0 8px 0;
     grid-row: 2;
     overflow-x: hidden;
-    overflow-y: scroll;
+    overflow-y: auto;
 }
 
 .content_wrapper {
@@ -47,6 +46,15 @@ main h1 {
     border-bottom-left-radius: 2%;
     font-family: 'Josefin Sans', sans-serif;
     box-shadow: 0 19px 38px rgba(255,255,255,0.25), 0 15px 12px rgba(255,255,255,0.17);
+
+    -webkit-box-shadow: 0 19px 38px rgba(255,255,255,0.25), 0 15px 12px rgba(255,255,255,0.17);
+    -moz-box-shadow: 0 19px 38px rgba(255,255,255,0.25), 0 15px 12px rgba(255,255,255,0.17);
+    -o-box-shadow: 0 19px 38px rgba(255,255,255,0.25), 0 15px 12px rgba(255,255,255,0.17);
+
+    -webkit-border-bottom-right-radius: 2%;
+    -webkit-border-bottom-left-radius: 2%;
+    -moz-border-radius-bottomright: 2%;
+    -moz-border-radius-bottomleft: 2%;
 }
 
 .content_image {
@@ -62,7 +70,6 @@ main h1 {
     min-height: 100%;
     max-width: 100%;
     max-height: 100%;
-
 }
 
 .content_title {
@@ -107,6 +114,10 @@ main h1 {
     display: inline-block;
     transition: all 0.4s ease 0s;
     padding: 3px 2px 2px 2px;
+
+    -webkit-transition: all 0.4s ease 0s;
+    -moz-transition: all 0.4s ease 0s;
+    -o-transition: all 0.4s ease 0s;
 }
 
 .content_btn:hover {
@@ -114,6 +125,14 @@ main h1 {
     border-color: #f1f1f1 !important;
     transform: scale(1.1);
     transition: all 0.4s ease 0s;
+
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -o-transform: scale(1.1);
+
+    -webkit-transition: all 0.4s ease 0s;
+    -moz-transition: all 0.4s ease 0s;
+    -o-transition: all 0.4s ease 0s;
 }
 
 .content_date {
@@ -126,24 +145,8 @@ main h1 {
     grid-row: 2;
     grid-column: 2;
     align-self: center;
-}
 
-.scroll_box span {
-    display: block;
-    width: 20px;
-    height: 20px;
-    border-bottom: 2px solid #fff;
-    border-right: 2px solid #fff;
-    transform: rotate(45deg);
-    animation: scroll 2s infinite;
-}
-
-.scroll_box span:nth-child(2) {
-    animation-delay: -0.2s;
-}
-
-.scroll_box span:nth-child(3) {
-    animation-delay: -0.2s;
+    -webkit-align-self: center;
 }
 
 /* smartphones, iPhone, portrait 480x320 phones */
@@ -180,16 +183,131 @@ main h1 {
 .content_container { -ms-overflow-style: none; }
 .content_container { scrollbar-width:none; }
 
-@keyframes scroll {
-    0% {
-        opacity: 0;
-        transform: rotate(45deg) translate(-2vh, -2vh);
-    }
-    50% {
-        opacity: 1;
-    }
-    100% {
-        opacity: 0;
-        transform: rotate(45deg) translate(2vh, 2vh);
-    }
+/* MODAL WINDOW CSS */
+
+.modal {
+    z-index: 4;
+    position: absolute;
+    background-color: black;
+    margin-top: 100vh;
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
 }
+
+.modal_header {
+    width: 100%;
+    height: 10vh;
+    display: grid;
+    grid-template-columns: 1fr 56px;
+}
+
+.modal_title_wrap {
+    grid-column: 1;
+    justify-self: center;
+    align-self: start;
+    margin-left: 56px;
+}
+
+.bracket {
+    color: white;
+    font-size: 44px;
+}
+
+.modal_title {
+    color: white;
+    font-family: 'Nothing You Could Do', cursive;
+}
+
+.close {
+    font-size: 48px;
+    color: white;
+    float: right;
+    padding-right: 10px;
+    cursor: pointer;
+    grid-column: 2;
+    justify-self: right;
+    align-self: start;
+}
+
+/* Content */
+.modal_content {
+    height: 90vh;
+    width: 100%;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.modal_content p {
+    font-size: 20px;
+    color: white;
+}
+
+.modal_content_odd, .modal_content_even {
+    max-height: 45vh;
+    display: grid;
+    margin-top: 5vh;
+}
+
+.modal_content_title {
+    grid-column: 2/ span 3;
+    grid-row: 1;
+    color: white;
+    justify-self: center;
+    text-decoration: underline;
+}
+
+.modal_content_odd {
+    grid-template-columns: 5px 0.5fr 1fr 5px;
+    grid-template-rows: 0.2fr 1fr;
+}
+
+.modal_content_even {
+    grid-template-columns: 5px 1fr 0.5fr 5px;
+    grid-template-rows: 0.2fr 1fr;
+}
+
+.image_even_container, .image_odd_container {
+    border: white 2px inset;
+}
+
+.image_odd_container {
+    grid-column: 2;
+    grid-row: 2;
+    height: 100%;
+    width: 100%;
+    box-shadow: -2px 2px 10px white;
+    padding-left: 2px;
+}
+
+.image_even_container {
+    grid-column: 3;
+    grid-row: 2;
+    height: 100%;
+    width: 100%;
+    box-shadow: 2px 2px 10px white;
+    padding-right: 2px;
+}
+
+.image_odd_container img, .image_even_container img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+
+.text_odd_container {
+    padding: 0 10px 0 10px;
+    grid-column: 3;
+    grid-row: 2;
+}
+
+.text_even_container {
+    padding: 0 10px 0 10px;
+    grid-column: 2;
+    grid-row: 2;
+}
+
+/* Making sure the content area scroll bar is hidden */
+.modal::-webkit-scrollbar { width: 0 !important }
+.modal { overflow: -moz-scrollbars-none; }
+.modal { -ms-overflow-style: none; }
+.modal { scrollbar-width:none; }

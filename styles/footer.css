@@ -27,6 +27,9 @@ footer {
     display: flex;
     justify-content: end;
     align-items: center;
+
+    -webkit-justify-content: flex-end;
+    -webkit-align-items: center;
 }
 
 .social_icon {
@@ -45,6 +48,8 @@ footer {
     color: white;
     padding-left: 5px;
     align-self: center;
+
+    -webkit-align-self: center;
 }
 
 #social_icons_container div + div:before {
