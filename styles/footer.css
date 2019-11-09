@@ -47,9 +47,10 @@ footer {
 .social_icon h5 {
     color: white;
     padding-left: 5px;
-    align-self: center;
+    cursor: pointer;
 
     -webkit-align-self: center;
+    align-self: center;
 }
 
 #social_icons_container div + div:before {

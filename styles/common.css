@@ -1,13 +1,11 @@
 /* Scroll indicator */
 
-.modal_scroll_wrap {
-    width: 100%;
+.scroll_wrap {
     height: 3.125em;
     display: grid;
     grid-template-columns: 1fr;
-    margin-top: 10px;
 }
-.modal_icon-scroll {
+.icon-scroll {
     width: 1em;
     height: 3.125em;
     z-index: 99999;
@@ -23,16 +21,16 @@
     align-self: center;
 }
 
-.modal_icon-arrows {
+.icon-arrows {
     width: 1em;
 }
-.modal_icon-arrows::after,
-.modal_icon-arrows::before {
+.icon-arrows::after,
+.icon-arrows::before {
     content: '';
 }
-.modal_icon-arrows span,
-.modal_icon-arrows::after,
-.modal_icon-arrows::before {
+.icon-arrows span,
+.icon-arrows::after,
+.icon-arrows::before {
     display: block;
     width: 0.315em;
     height: 0.315em;
@@ -56,7 +54,7 @@
     animation-direction: alternate;
 }
 
-.modal_icon-arrows::before {
+.icon-arrows::before {
     margin-top: 0.315em;
 
     -webkit-animation-delay: .1s;
@@ -65,21 +63,21 @@
     animation-delay: .1s;
 }
 
-.modal_icon-scroll span {
+.icon-scroll span {
     -webkit-animation-delay: .2s;
     -moz-animation-delay: .2s;
     -o-animation-delay: .2s;
     animation-delay: .2s;
 }
 
-.modal_icon-arrows::after {
+.icon-arrows::after {
     -webkit-animation-delay: .3s;
     -moz-animation-delay: .3s;
     -o-animation-delay: .3s;
     animation-delay: .3s;
 }
 
-.modal_icon-scroll .modal_mouse {
+.icon-scroll .mouse {
     height: 1.375em;
     width: .875em;
     border: 1px solid rgba(255,255,255,.8);
@@ -89,7 +87,7 @@
     border-radius: 2em;
 }
 
-.modal_icon-scroll .modal_wheel {
+.icon-scroll .wheel {
     position: relative;
     display: block;
     height: 0.1875em;
