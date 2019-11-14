@@ -12,10 +12,34 @@
     -webkit-align-self: center;
 }
 
-#modal_scroll {
-    width: 100%;
-    margin-top: 10px;
+/* OVERLOAD MODAL SCROLL ICON */
+#modal_scroll_wrap {
+    justify-self: center;
+    grid-column: 2;
+    grid-row: 2;
+    /*background-color: rgba(25, 29, 25, 0.1);*/
+
+    /*border-bottom-left-radius: 100%;*/
+    /*border-bottom-right-radius: 100%;*/
 }
+
+#modal_icon_arrows span,
+#modal_icon_arrows::after,
+#modal_icon_arrows::before {
+    border-right: 1px solid rgba(0, 0, 0, .8);
+    border-bottom: 1px solid rgba(0, 0, 0, .8);
+}
+
+#modal_icon_scroll #modal_mouse {
+    border: 1px solid rgba(0,0,0,.8);
+}
+
+#modal_icon_scroll #modal_wheel {
+    background: rgba(0,0,0,.8);
+}
+
+/* Main CSS */
+
 
 main {
     height: 67vh;
@@ -157,15 +181,6 @@ main h1 {
     justify-self: center;
 }
 
-/*.scroll_box {*/
-/*    justify-self: center;*/
-/*    grid-row: 2;*/
-/*    grid-column: 2;*/
-/*    align-self: center;*/
-
-/*    -webkit-align-self: center;*/
-/*}*/
-
 /* smartphones, iPhone, portrait 480x320 phones */
 @media (min-width:320px) {
     .content_container {
@@ -205,11 +220,19 @@ main h1 {
 .modal {
     z-index: 4;
     position: absolute;
-    background-color: black;
+    background-color: white;
     margin-top: 100vh;
     width: 100%;
     height: 100%;
     overflow-y: scroll;
+}
+
+.modal_top {
+    display: grid;
+    width: 100%;
+    height: 10vh;
+    grid-template-columns: .5fr 1fr;
+    grid-template-rows: 1fr auto;
 }
 
 .modal_header {
@@ -217,6 +240,7 @@ main h1 {
     height: 10vh;
     display: grid;
     grid-template-columns: 1fr 56px;
+    /*background-color: rgba(25, 29, 25, 0.1);*/
 }
 
 .modal_title_wrap {
@@ -227,18 +251,19 @@ main h1 {
 }
 
 .bracket {
-    color: white;
-    font-size: 44px;
+    color: black;
+    font-size: 2vw;
 }
 
 .modal_title {
-    color: white;
+    font-size: 2vw;
+    color: black;
     font-family: 'Nothing You Could Do', cursive;
 }
 
 .close {
     font-size: 48px;
-    color: white;
+    color: black;
     float: right;
     padding-right: 10px;
     cursor: pointer;
@@ -247,16 +272,22 @@ main h1 {
     align-self: start;
 }
 
+.project_info {
+    grid-column: 1;
+    grid-row: 1/3;
+}
+
 /* Content */
 .modal_content {
     height: 90vh;
     width: 100%;
     font-family: 'Josefin Sans', sans-serif;
+    margin-top: 12vh;
 }
 
 .modal_content p {
     font-size: 20px;
-    color: white;
+    color: black;
 }
 
 .modal_content_odd, .modal_content_even {
@@ -268,7 +299,7 @@ main h1 {
 .modal_content_title {
     grid-column: 2/ span 3;
     grid-row: 1;
-    color: white;
+    color: black;
     justify-self: center;
     text-decoration: underline;
 }
@@ -284,7 +315,7 @@ main h1 {
 }
 
 .image_even_container, .image_odd_container {
-    border: white 2px inset;
+    border: black 1px solid;
 }
 
 .image_odd_container {
@@ -292,12 +323,11 @@ main h1 {
     grid-row: 2;
     height: 100%;
     width: 100%;
-    padding-left: 2px;
 
-    -webkit-box-shadow: -2px 2px 10px white;
-    -moz-box-shadow: -2px 2px 10px white;
-    -o-box-shadow: -2px 2px 10px white;
-    box-shadow: -2px 2px 10px white;
+    -webkit-box-shadow: -2px 2px 10px black;
+    -moz-box-shadow: -2px 2px 10px black;
+    -o-box-shadow: -2px 2px 10px black;
+    box-shadow: -2px 2px 10px black;
 }
 
 .image_even_container {
@@ -305,30 +335,66 @@ main h1 {
     grid-row: 2;
     height: 100%;
     width: 100%;
-    padding-right: 2px;
 
-    -webkit-box-shadow: 2px 2px 10px white;
-    -moz-box-shadow: 2px 2px 10px white;
-    -o-box-shadow: 2px 2px 10px white;
-    box-shadow: 2px 2px 10px white;
+    -webkit-box-shadow: 2px 2px 10px black;
+    -moz-box-shadow: 2px 2px 10px black;
+    -o-box-shadow: 2px 2px 10px black;
+    box-shadow: 2px 2px 10px black;
 }
 
 .image_odd_container img, .image_even_container img {
     height: 100%;
     width: 100%;
-    object-fit: contain;
+    object-fit: fill;
 }
 
 .text_odd_container {
     padding: 0 10px 0 10px;
     grid-column: 3;
     grid-row: 2;
+    background-color: rgba(25, 29, 25, 0.1);
 }
 
 .text_even_container {
     padding: 0 10px 0 10px;
     grid-column: 2;
     grid-row: 2;
+    background-color: rgba(25, 29, 25, 0.1);
+}
+
+.divider
+{
+    position: relative;
+    margin-top: 90px;
+    height: 1px;
+}
+
+.div-transparent:before
+{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 5%;
+    right: 5%;
+    width: 90%;
+    height: 1px;
+    background-image: linear-gradient(to right, transparent, rgb(48,49,51), transparent);
+}
+
+.div-dot:after
+{
+    content: "";
+    position: absolute;
+    z-index: 1;
+    top: -9px;
+    left: calc(50% - 9px);
+    width: 18px;
+    height: 18px;
+    background-color: white;
+    border: 1px solid rgb(48,49,51);
+    border-radius: 50%;
+    box-shadow: inset 0 0 0 2px white,
+    0 0 0 4px white;
 }
 
 /* Making sure the content area scroll bar is hidden */

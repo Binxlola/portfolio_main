@@ -53,24 +53,24 @@
 <body>
     <!-- Modal Windows   -->
     <div class="modal" id="interstellar_adventure">
-        <div class="modal_header">
+            <div class="modal_header">
             <span class="modal_title_wrap">
                 <span class="bracket_left bracket">{</span>
                 <span class="modal_title">Interstellar Adventure</span>
                 <span class="bracket_right bracket">}</span>
             </span>
-            <span class="close" onclick="closeModal()">&times;</span>
-        </div>
-        <div class="scroll_wrap" id="modal_scroll">
-            <div class="icon-scroll">
-                <div class="mouse">
-                    <div class="wheel"></div>
-                </div>
-                <div class="icon-arrows">
-                    <span></span>
+                <span class="close" onclick="closeModal()">&times;</span>
+            </div>
+            <div class="scroll_wrap" id="modal_scroll_wrap">
+                <div class="icon-scroll" id="modal_icon_scroll">
+                    <div class="mouse" id="modal_mouse">
+                        <div class="wheel" id="modal_wheel"></div>
+                    </div>
+                    <div class="icon-arrows" id="modal_icon_arrows">
+                        <span></span>
+                    </div>
                 </div>
             </div>
-        </div>
         <div class="modal_content">
             <div class="modal_content_odd">
                 <div class="modal_content_title">
@@ -90,6 +90,7 @@
                     </p>
                 </div>
             </div>
+            <div class="divider div-transparent div-dot"></div>
             <div class="modal_content_even">
                 <div class="modal_content_title">
                     <h2>Test Title 2</h2>

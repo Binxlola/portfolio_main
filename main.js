@@ -54,12 +54,14 @@ function openModal() {
 
     $(".modal").animate({marginTop: "0"}, 1000, 'linear');
     // animBrackets('open');
-    $(".modal_title").animate({fontSize: "40px"}, 1000, "linear");
+    $(".modal_title").animate({fontSize: "2vw"}, 1000, "linear");
+    $("#projects_scroll").css({display: "none"});
 }
 
 function closeModal() {
     $(".modal").animate({marginTop: "100vh"}, 1000, 'linear');
     $(".modal_title").animate({fontSize: "0"}, 1000, 'linear');
-    animBrackets('close');
+    $("#projects_scroll").css({display: "grid"});
+    // animBrackets('close');
 
 }
