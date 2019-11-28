@@ -1,4 +1,6 @@
 const menu = '#menu';
+const bigScreen = window.matchMedia( "(min-width: 1280px), (min-width: 961px), (min-width: 700px)" );
+const smallScreen = window.matchMedia( "(max-width: 699px)" );
 
 // Always make sure that any style values set by jquery get reset
 window.onresize = function () {
@@ -9,6 +11,10 @@ window.onresize = function () {
     $('.scroll_box').removeAttr('style');
     $('.main_wrapper').removeAttr('style');
     $('#background-image').removeAttr('style');
+
+    if (small.matches) {
+        $('.modal_title').removeAttr('style');
+    }
 };
 
 
@@ -54,7 +60,11 @@ function openModal() {
 
     $(".modal").animate({marginTop: "0"}, 1000, 'linear');
     // animBrackets('open');
-    $(".modal_title").animate({fontSize: "2vw"}, 1000, "linear");
+    if (smallScreen.matches) {
+        $(".modal_title").animate({fontSize: "5vw"}, 1000, "linear");
+    } else if (bigScreen.matches) {
+        $(".modal_title").animate({fontSize: "2vw"}, 1000, "linear");
+    }
     $("#projects_scroll").css({display: "none"});
 }
 
