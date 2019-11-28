@@ -1,3 +1,25 @@
+#blog_scroll_wrap {
+    justify-self: center;
+    width: 1em;
+    right: 0;
+    position: fixed;
+}
+
+#blog_icon_arrows span,
+#blog_icon_arrows::after,
+#blog_icon_arrows::before {
+    border-right: 1px solid rgba(0, 0, 0, .8);
+    border-bottom: 1px solid rgba(0, 0, 0, .8);
+}
+
+#blog_icon_scroll #blog_mouse {
+    border: 1px solid rgba(0,0,0,.8);
+}
+
+#blog_icon_scroll #blog_wheel {
+    background: rgba(0,0,0,.8);
+}
+
 @media (min-width:320px) and (max-width: 699px) {
     main {
         height: 100%;
@@ -7,7 +29,7 @@
     }
 
     .blog_post {
-        grid-template-rows: 0.6fr 1fr;
+        grid-template-rows: 0.3fr 1fr;
     }
 
     .post_image {
